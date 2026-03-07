@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secco - Software House de Elite</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="grid-background">
+      <header class="main-header container">
+        <div class="logo">
+          <span class="logo-icon">S</span>
+          <span class="logo-text">Secco</span>
+        </div>
+
+        <div class="nav-container">
+          <nav class="main-nav">
+            <ul>
+              <li><a href="#servicos">Serviços</a></li>
+              <li><a href="#portfolio">Portfólio</a></li>
+              <li><a href="#equipe">Equipe</a></li>
+            </ul>
+          </nav>
+          <a href="#contato" class="btn btn-contact">Contato</a>
+        </div>
+      </header>
+
+      <section class="hero-section container">
+        <div class="status-badge animate-up">
+          <span class="status-icon"></span>
+          <span class="status-text">Software House de Elite</span>
+        </div>
+
+        <h1 class="hero-title animate-left delay-1">
+          Transformamos Ideias<br />
+          em <span class="highlight">Produtos Digitais</span> de<br />
+          Alta Performance
+        </h1>
+
+        <p class="hero-subtitle animate-right delay-2">
+          Desenvolvimento sob medida de SaaS escaláveis e soluções web ágeis
+          para o seu negócio.
+        </p>
+
+        <div class="hero-btns animate-up delay-3">
+          <a href="#contato" class="btn btn-primary"
+            >Solicitar Orçamento &rarr;</a
+          >
+          <a href="#portfolio" class="btn btn-ghost">Ver Projetos</a>
+        </div>
+      </section>
+      <section id="servicos" class="services-section container">
+        <div class="section-header animate-up">
+          <span class="section-subtitle">SERVIÇOS</span>
+          <h2 class="section-title">O que fazemos de melhor</h2>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card animate-left delay-1">
+            <div class="service-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+              </svg>
+            </div>
+            <h3 class="service-title">SaaS & Sistemas Complexos</h3>
+            <p class="service-desc">
+              Arquiteturas robustas com Python/Django e React para produtos de
+              larga escala.
+            </p>
+          </div>
+
+          <div class="service-card animate-up delay-2">
+            <div class="service-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon
+                  points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"
+                ></polygon>
+              </svg>
+            </div>
+            <h3 class="service-title">Landing Pages Estratégicas</h3>
+            <p class="service-desc">
+              Criação de LPs simples, rápidas e focadas em conversão para
+              validar ideias ou vender serviços.
+            </p>
+          </div>
+
+          <div class="service-card animate-right delay-3">
+            <div class="service-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Consultoria & Cloud</h3>
+            <p class="service-desc">
+              Especialistas em AWS e automação de processos para escalar sua
+              operação.
+            </p>
+          </div>
+        </div>
+      </section>
+      <div id="project-modal" class="modal-overlay">
+        <div class="modal-content">
+          <button class="modal-close">&times;</button>
+          <div class="modal-image-container">
+            <img id="modal-img" src="" alt="Imagem do Projeto" />
+          </div>
+          <div class="modal-body">
+            <div id="modal-tags" class="project-tags"></div>
+            <h3 id="modal-title" class="modal-title">Título do Projeto</h3>
+            <p id="modal-desc" class="modal-desc">
+              Descrição completa do projeto aparecerá aqui.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <section id="portfolio" class="portfolio-section container">
+        <div class="section-header animate-up">
+          <span class="section-subtitle">PORTFÓLIO</span>
+          <h2 class="section-title">Projetos em destaque</h2>
+        </div>
+
+        <div class="portfolio-grid">
+          <div
+            class="portfolio-card animate-left delay-1"
+            data-project="geocarbo"
+          >
+            <div class="project-tags">
+              SAAS &middot; IA &middot; SUSTENTABILIDADE
+            </div>
+            <h3 class="project-title">GeoCarbo</h3>
+            <p class="project-desc">
+              Plataforma de créditos de carbono na Caatinga com análise
+              geoespacial e inteligência artificial.
+            </p>
+          </div>
+
+          <div class="portfolio-card animate-up delay-2" data-project="gestao">
+            <svg
+              class="card-arrow"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+            <div class="project-tags">
+              WEB APP &middot; DJANGO &middot; REACT
+            </div>
+            <h3 class="project-title">Sistema de Gestão</h3>
+            <p class="project-desc">
+              ERP customizado para operações logísticas com dashboards em tempo
+              real.
+            </p>
+          </div>
+
+          <div
+            class="portfolio-card animate-right delay-3"
+            data-project="landing"
+          >
+            <div class="project-tags">LP &middot; PERFORMANCE &middot; SEO</div>
+            <h3 class="project-title">Landing Page de Conversão</h3>
+            <p class="project-desc">
+              Página de alta conversão para lançamento de produto digital com
+              A/B testing integrado.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="diferenciais" class="diferenciais-section container">
+        <div class="section-header animate-up">
+          <span class="section-subtitle">DIFERENCIAIS</span>
+          <h2 class="section-title">Por que a Secco?</h2>
+        </div>
+
+        <div class="diferenciais-grid">
+          <div class="diferencial-item animate-left delay-1">
+            <div class="diferencial-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"
+                ></path>
+                <path
+                  d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"
+                ></path>
+                <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+              </svg>
+            </div>
+            <h3 class="diferencial-title">Desenvolvimento Ágil</h3>
+            <p class="diferencial-desc">
+              Sprints curtos, entregas frequentes e feedback contínuo.
+            </p>
+          </div>
+
+          <div class="diferencial-item animate-up delay-2">
+            <div class="diferencial-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"
+                ></path>
+                <path
+                  d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="diferencial-title">UI/UX Moderno</h3>
+            <p class="diferencial-desc">
+              Interfaces intuitivas com foco na experiência do usuário.
+            </p>
+          </div>
+
+          <div class="diferencial-item animate-right delay-3">
+            <div class="diferencial-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3 class="diferencial-title">Código Limpo</h3>
+            <p class="diferencial-desc">
+              Arquitetura sólida, testes automatizados e documentação.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="equipe" class="equipe-section container">
+        <div class="section-header animate-up">
+          <span class="section-subtitle">EQUIPE</span>
+          <h2 class="section-title">Quem faz acontecer</h2>
+        </div>
+
+        <div class="equipe-grid">
+          <div class="equipe-card animate-up delay-1">
+            <div class="equipe-avatar">
+              <img src="img/Igor.jpeg" alt="Foto do Igor" />
+            </div>
+            <h3 class="equipe-nome">Igor</h3>
+            <p class="equipe-cargo">CEO & Arquiteto de Software</p>
+            <div class="equipe-social">
+              <a
+                href="https://www.linkedin.com/in/dev1gor/"
+                target="_blank"
+                aria-label="LinkedIn"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  ></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="equipe-card animate-up delay-2">
+            <div class="equipe-avatar">
+              <img src="img/Sergio.jpeg" alt="Foto do Sergio" />
+            </div>
+            <h3 class="equipe-nome">Sergio Barbosa</h3>
+            <p class="equipe-cargo">CPO & Desenvolvedor de Software</p>
+            <div class="equipe-social">
+              <a
+                href="https://www.linkedin.com/in/sergio-barbosa-03195133b/ "
+                target="_blank"
+                aria-label="LinkedIn"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  ></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="equipe-card animate-up delay-3">
+            <div class="equipe-avatar">
+              <img src="img/Lemos.jpg" alt="Foto do Gabriel Lemos" />
+            </div>
+            <h3 class="equipe-nome">Gabriel Lemos</h3>
+            <p class="equipe-cargo">COO & Desenvolvedor de Software</p>
+            <div class="equipe-social">
+              <a
+                href="https://www.linkedin.com/in/gabelemos/"
+                target="_blank"
+                aria-label="LinkedIn"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  ></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="equipe-card animate-up delay-4">
+            <div class="equipe-avatar">
+              <img src="img/Juan.jpeg" alt="Foto do Everton Juan" />
+            </div>
+            <h3 class="equipe-nome">Everton Juan</h3>
+            <p class="equipe-cargo">CFO & Desenvolvedor de Software</p>
+            <div class="equipe-social">
+              <a
+                href="https://www.linkedin.com/in/everton-veloso-juan-bispo-2006-oliveira/"
+                target="_blank"
+                aria-label="LinkedIn"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  ></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="equipe-card animate-up delay-5">
+            <div class="equipe-avatar">
+              <img src="img/Luan.jpeg" alt="Foto do Luan Felipe" />
+            </div>
+            <h3 class="equipe-nome">Luan Felipe</h3>
+            <p class="equipe-cargo">CSO & Desenvolvedor de Software</p>
+            <div class="equipe-social">
+              <a
+                href="https://www.linkedin.com/in/luanfelipe-dev/"
+                target="_blank"
+                aria-label="LinkedIn"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  ></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contato" class="contato-section container">
+        <div class="section-header animate-up">
+          <span class="section-subtitle">CONTATO</span>
+          <h2 class="section-title">Vamos conversar?</h2>
+          <p class="section-desc">
+            Preencha o formulário abaixo e nossa equipe entrará em contato o
+            mais rápido possível.
+          </p>
+        </div>
+
+        <div class="contato-grid">
+          <div class="contato-info-card animate-left delay-1">
+            <h3 class="contato-info-title">Informações de Contato</h3>
+            <p class="contato-info-desc">
+              Entre em contato conosco por qualquer um dos canais abaixo ou
+              preencha o formulário ao lado.
+            </p>
+
+            <ul class="contato-lista">
+              <li>
+                <div class="contato-icone">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect
+                      x="2"
+                      y="4"
+                      width="20"
+                      height="16"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                  </svg>
+                </div>
+                <span>gruposeccolab@gmail.com</span>
+              </li>
+              <li>
+                <div class="contato-icone">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                    ></path>
+                  </svg>
+                </div>
+                <span>+55 (81) 99141-3580</span>
+              </li>
+              <li>
+                <div class="contato-icone">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"
+                    ></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <span>Pernambuco, Brasil</span>
+              </li>
+            </ul>
+
+            <div class="contato-rodape">
+              Resposta em até <span class="destaque-verde">24 horas</span>
+            </div>
+          </div>
+
+          <div class="contato-form-card animate-right delay-2">
+            <form id="form-whatsapp" class="contato-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nome">NOME *</label>
+                  <input
+                    type="text"
+                    id="nome"
+                    placeholder="Seu nome"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">E-MAIL *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="seu@email.com"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="telefone">TELEFONE</label>
+                  <input
+                    type="tel"
+                    id="telefone"
+                    placeholder="(11) 99999-9999"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="assunto">ASSUNTO *</label>
+                  <input
+                    type="text"
+                    id="assunto"
+                    placeholder="Ex: Orçamento para SaaS"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="mensagem">MENSAGEM *</label>
+                <textarea
+                  id="mensagem"
+                  rows="4"
+                  placeholder="Conte-nos sobre seu projeto..."
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn-enviar">
+                Enviar Mensagem
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <footer class="main-footer container">
+        <div class="footer-content animate-up">
+          <div class="logo">
+            <span class="logo-icon">S</span>
+            <span class="logo-text">Secco</span>
+          </div>
+
+          <div class="footer-copyright">
+            &copy; 2026 Secco. Todos os direitos reservados.
+          </div>
+
+          <div class="footer-social">
+            <a
+              href="https://www.instagram.com/seccolab/ "
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path
+                  d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                ></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/company/seccolab/?viewAsMember=true"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                ></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+
+            <a href="gruposeccolab@gmail.com" aria-label="E-mail">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                ></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
