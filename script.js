@@ -16,49 +16,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   // 1. Banco de dados simulado com as informações de cada projeto
-const projectsData = {
-  geocarbo: {
-    tags: "SAAS · IA · GEOESPACIAL",
-    title: "GeoCarbo",
-    desc: "Plataforma SaaS para monitoramento de créditos de carbono utilizando análise geoespacial e inteligência artificial. O sistema processa imagens de satélite e dados ambientais para estimar captura de carbono e gerar relatórios para projetos ambientais.",
-    img: "img/carbo.jpeg",
-  },
+  const projectsData = {
+    geocarbo: {
+      tags: "SAAS · IA · GEOESPACIAL",
+      title: "GeoCarbo",
+      desc: "Plataforma SaaS para monitoramento de créditos de carbono utilizando análise geoespacial e inteligência artificial. O sistema processa imagens de satélite e dados ambientais para estimar captura de carbono e gerar relatórios para projetos ambientais.",
+      img: "img/carbo.jpeg",
+    },
 
-  gestao: {
-    tags: "WEB APP · DJANGO · REACT",
-    title: "Sistema de Gestão Logística",
-    desc: "ERP personalizado para operações logísticas com controle de entregas, rotas, estoque e dashboards em tempo real. Desenvolvido com backend em Django e frontend em React para alta performance e escalabilidade.",
-    img: "img/ERP.png",
-  },
+    gestao: {
+      tags: "WEB APP · DJANGO · REACT",
+      title: "Sistema de Gestão Logística",
+      desc: "ERP personalizado para operações logísticas com controle de entregas, rotas, estoque e dashboards em tempo real. Desenvolvido com backend em Django e frontend em React para alta performance e escalabilidade.",
+      img: "img/ERP.png",
+    },
 
-  automacao: {
-    tags: "AUTOMAÇÃO · APIs · WORKFLOWS",
-    title: "Plataforma de Automação Empresarial",
-    desc: "Sistema de automação de processos empresariais que permite integrar diferentes serviços via APIs e criar workflows inteligentes. Automatiza tarefas operacionais e integra sistemas corporativos.",
-    img: "img/autoflow.jpeg ",
-  },
+    automacao: {
+      tags: "AUTOMAÇÃO · APIs · WORKFLOWS",
+      title: "Plataforma de Automação Empresarial",
+      desc: "Sistema de automação de processos empresariais que permite integrar diferentes serviços via APIs e criar workflows inteligentes. Automatiza tarefas operacionais e integra sistemas corporativos.",
+      img: "img/autoflow.jpeg ",
+    },
 
-  analytics: {
-    tags: "DATA · DASHBOARD · ANALYTICS",
-    title: "Plataforma de Analytics",
-    desc: "Dashboard para análise de dados empresariais com visualização de métricas, relatórios e gráficos interativos. Permite acompanhar indicadores estratégicos em tempo real.",
-    img: "img/analytics.png",
-  },
+    analytics: {
+      tags: "DATA · DASHBOARD · ANALYTICS",
+      title: "Plataforma de Analytics",
+      desc: "Dashboard para análise de dados empresariais com visualização de métricas, relatórios e gráficos interativos. Permite acompanhar indicadores estratégicos em tempo real.",
+      img: "img/analytics.jpeg",
+    },
 
-  api: {
-    tags: "API · BACKEND · INTEGRAÇÕES",
-    title: "API de Integração Empresarial",
-    desc: "Backend desenvolvido para integração entre diferentes sistemas corporativos utilizando APIs REST seguras, autenticação JWT e processamento de dados em larga escala.",
-    img: "img/api.png",
-  },
+    api: {
+      tags: "API · BACKEND · INTEGRAÇÕES",
+      title: "API de Integração Empresarial",
+      desc: "Backend desenvolvido para integração entre diferentes sistemas corporativos utilizando APIs REST seguras, autenticação JWT e processamento de dados em larga escala.",
+      img: "img/API.png",
+    },
 
-  landing: {
-    tags: "LP · PERFORMANCE · SEO",
-    title: "Landing Page de Conversão",
-    desc: "Página de alta performance desenvolvida para lançamento de produtos digitais com foco em conversão, otimização SEO e testes A/B integrados.",
-    img: "img/elite.png",
-  },
-};
+    landing: {
+      tags: "LP · PERFORMANCE · SEO",
+      title: "Landing Page de Conversão",
+      desc: "Página de alta performance desenvolvida para lançamento de produtos digitais com foco em conversão, otimização SEO e testes A/B integrados.",
+      img: "img/elite.png",
+    },
+  };
 
   // 2. Selecionando os elementos do DOM
   const modal = document.getElementById("project-modal");

@@ -644,29 +644,27 @@ body {
 }
 
 /* =========================================
-   ESTILOS DA SEÇÃO DE EQUIPE (Completo e Atualizado)
+   SEÇÃO DE EQUIPE - SECCO
    ========================================= */
 
 .equipe-section {
-  padding-top: 100px; /* Um pouco mais de espaço para respirar */
-  padding-bottom: 100px;
+  padding: 100px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* --- Layout de Grid Estrito (3 em cima, 2 embaixo) --- */
 .equipe-grid {
   display: grid;
-  /* Criamos 6 colunas virtuais para facilitar a centralização da linha inferior */
-  grid-template-columns: repeat(6, 1fr);
-  gap: 32px; /* Aumentado ligeiramente para um visual mais limpo */
+  grid-template-columns: repeat(
+    6,
+    1fr
+  ); /* Grid de 6 colunas para alinhar a linha de 2 cards */
+  gap: 32px;
   width: 100%;
-  max-width: 1100px; /* Mantém os cards contidos e centralizados no total */
-  margin: 0 auto;
+  max-width: 1100px;
 }
 
-/* Estilo Individual do Card da Equipe */
 .equipe-card {
   background-color: #121212;
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -677,113 +675,108 @@ body {
   align-items: center;
   text-align: center;
   transition: all 0.3s ease;
-  width: 100%; /* Ocupa a largura do seu span de coluna */
 }
 
-/* --- Posicionamento dos Membros --- */
-
-/* Itens da linha superior (Igor, Sergio, Gabriel) ocupam 2 colunas cada */
+/* Posicionamento: 3 cards na primeira linha, 2 centralizados na segunda */
 .equipe-card:nth-child(1),
 .equipe-card:nth-child(2),
 .equipe-card:nth-child(3) {
   grid-column: span 2;
 }
 
-/* Itens da linha inferior (Everton, Luan) ocupam 2 colunas cada e são centralizados */
-/* Everton (4º item) começa na coluna 2 e vai até a 4 */
 .equipe-card:nth-child(4) {
   grid-column: 2 / 4;
 }
 
-/* Luan (5º item) começa na coluna 4 e vai até a 6 */
 .equipe-card:nth-child(5) {
   grid-column: 4 / 6;
 }
 
-/* Efeito Hover do Card */
 .equipe-card:hover {
-  border-color: rgba(52, 211, 153, 0.4); /* Verde mais visível no hover */
+  border-color: rgba(52, 211, 153, 0.4);
   background-color: #151515;
-  transform: translateY(-8px); /* Elevação mais suave */
+  transform: translateY(-8px);
 }
 
-/* Container circular para a foto (Avatar) */
 .equipe-avatar {
-  width: 90px; /* Aumentado ligeiramente para dar mais espaço à foto */
+  width: 90px;
   height: 90px;
   border-radius: 50%;
   margin-bottom: 24px;
   overflow: hidden;
   border: 2px solid rgba(52, 211, 153, 0.2);
   transition: all 0.3s ease;
-  background-color: #1a1a1a; /* Fundo escuro sutil se a foto demorar a carregar */
 }
 
-.equipe-card:hover .equipe-avatar {
-  border-color: var(--accent-color); /* Borda brilha no hover */
-  box-shadow: 0 0 15px rgba(52, 211, 153, 0.3); /* Brilho verde suave */
-}
-
-/* Imagem da foto preenchendo o círculo */
 .equipe-avatar img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Preenche o círculo sem achatar a imagem */
-  display: block;
+  object-fit: cover;
 }
 
-/* --- Arrumando a Foto do Luan (nth-child 5) --- */
-/* Targetamos especificamente o avatar do Luan para reposicionar o rosto */
-.equipe-card:nth-child(5) .equipe-avatar img {
-  /* Move a imagem ligeiramente para baixo para centralizar o rosto melhor vertically */
-  /*object-position: 50% 65%; /* 50% horizontal (centralizado), 65% vertical (move para baixo) */
-  /* Se a foto original tiver espaço, uma mudança sutil é melhor */
-  object-position: 50% 60%; /* Tente 60% se 65% for demais */
-}
-
-/* Textos e Redes Sociais */
 .equipe-nome {
   font-size: 1.3rem;
   font-weight: 700;
-  color: var(--text-color-main);
+  color: var(--text-color-main, #fff);
   margin-bottom: 8px;
 }
 
 .equipe-cargo {
   font-size: 0.95rem;
-  color: var(--text-color-sub);
-  min-height: 40px; /* Garante que os cards tenham a mesma altura */
+  color: var(--text-color-sub, #a1a1aa);
+  min-height: 40px;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
+/* BOTÕES SOCIAIS (LINKEDIN + CURRÍCULO) */
 .equipe-social {
   margin-top: 24px;
   display: flex;
-  justify-content: center;
+  gap: 12px;
 }
 
 .equipe-social a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px; /* Aumentado ligeiramente para um toque mais fácil */
+  width: 44px;
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.05);
-  color: var(--text-color-sub);
+  color: var(--text-color-sub, #a1a1aa);
   transition: all 0.3s ease;
-  border: 1px solid transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .equipe-social a:hover {
   background-color: rgba(52, 211, 153, 0.1);
-  color: var(--accent-color);
-  border-color: rgba(52, 211, 153, 0.3);
+  color: var(--accent-color, #34d399);
+  border-color: var(--accent-color, #34d399);
   transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(52, 211, 153, 0.2);
 }
 
+/* RESPONSIVIDADE */
+@media (max-width: 992px) {
+  .equipe-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .equipe-card {
+    grid-column: span 2 !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .equipe-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .equipe-card {
+    width: 100%;
+  }
+}
 /* =========================================
    MEDIA QUERIES (RESPONSIVIDADE)
    ========================================= */
