@@ -16,26 +16,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   // 1. Banco de dados simulado com as informações de cada projeto
-  const projectsData = {
-    geocarbo: {
-      tags: "SAAS &middot; IA &middot; SUSTENTABILIDADE",
-      title: "GeoCarbo",
-      desc: "A GeoCarbo é uma plataforma inovadora de Software as a Service (SaaS) dedicada ao monitoramento e mensuração de créditos de carbono, com foco inicial no bioma Caatinga. Utilizando imagens de satélite avançadas e algoritmos de Inteligência Artificial, o sistema analisa a biomassa e o potencial de sequestro de carbono em tempo real, oferecendo relatórios precisos para proprietários de terras e investidores sustentáveis.",
-      img: "img/carbo.jpeg  ", // Placeholder de satélite/terra
-    },
-    gestao: {
-      tags: "WEB APP &middot; DJANGO &middot; REACT",
-      title: "Sistema de Gestão Logística",
-      desc: "Desenvolvimento de um ERP (Enterprise Resource Planning) totalmente customizado para atender às necessidades complexas de operações logísticas. O sistema conta com um backend robusto em Python/Django, garantindo segurança e escalabilidade, e um frontend reativo em React. Oferece dashboards dinâmicos em tempo real, gestão de frotas, controle de estoque e integração com APIs de roteirização.",
-      img: "img/ERP.png", // Placeholder de dashboard
-    },
-    landing: {
-      tags: "LP &middot; PERFORMANCE &middot; SEO",
-      title: "Landing Page de Alta Conversão",
-      desc: "Página estratégica desenvolvida para o lançamento de um infoproduto no mercado digital. Focada inteiramente em performance (Load time < 1s) e otimização para motores de busca (SEO). A página inclui testes A/B nativos integrados para analisar o comportamento do usuário e maximizar as taxas de captura de leads e vendas diretas, utilizando copy persuasiva e design centrado no usuário.",
-      img: "img/elite.png", // Placeholder de web design
-    },
-  };
+const projectsData = {
+  geocarbo: {
+    tags: "SAAS · IA · GEOESPACIAL",
+    title: "GeoCarbo",
+    desc: "Plataforma SaaS para monitoramento de créditos de carbono utilizando análise geoespacial e inteligência artificial. O sistema processa imagens de satélite e dados ambientais para estimar captura de carbono e gerar relatórios para projetos ambientais.",
+    img: "img/carbo.jpeg",
+  },
+
+  gestao: {
+    tags: "WEB APP · DJANGO · REACT",
+    title: "Sistema de Gestão Logística",
+    desc: "ERP personalizado para operações logísticas com controle de entregas, rotas, estoque e dashboards em tempo real. Desenvolvido com backend em Django e frontend em React para alta performance e escalabilidade.",
+    img: "img/ERP.png",
+  },
+
+  automacao: {
+    tags: "AUTOMAÇÃO · APIs · WORKFLOWS",
+    title: "Plataforma de Automação Empresarial",
+    desc: "Sistema de automação de processos empresariais que permite integrar diferentes serviços via APIs e criar workflows inteligentes. Automatiza tarefas operacionais e integra sistemas corporativos.",
+    img: "img/autoflow.jpeg ",
+  },
+
+  analytics: {
+    tags: "DATA · DASHBOARD · ANALYTICS",
+    title: "Plataforma de Analytics",
+    desc: "Dashboard para análise de dados empresariais com visualização de métricas, relatórios e gráficos interativos. Permite acompanhar indicadores estratégicos em tempo real.",
+    img: "img/analytics.png",
+  },
+
+  api: {
+    tags: "API · BACKEND · INTEGRAÇÕES",
+    title: "API de Integração Empresarial",
+    desc: "Backend desenvolvido para integração entre diferentes sistemas corporativos utilizando APIs REST seguras, autenticação JWT e processamento de dados em larga escala.",
+    img: "img/api.png",
+  },
+
+  landing: {
+    tags: "LP · PERFORMANCE · SEO",
+    title: "Landing Page de Conversão",
+    desc: "Página de alta performance desenvolvida para lançamento de produtos digitais com foco em conversão, otimização SEO e testes A/B integrados.",
+    img: "img/elite.png",
+  },
+};
 
   // 2. Selecionando os elementos do DOM
   const modal = document.getElementById("project-modal");
