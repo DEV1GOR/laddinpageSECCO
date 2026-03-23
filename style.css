@@ -75,26 +75,13 @@ body {
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  height: 100%;
 }
 
-.logo-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 32px;
-  height: 32px;
-  background-color: var(--logo-icon-bg);
-  color: white;
-  font-weight: 800;
-  font-size: 1.2rem;
-  border-radius: 50%; /* Círculo perfeito */
-}
-
-.logo-text {
-  font-size: 1.3rem;
-  font-weight: 700;
-  letter-spacing: -0.5px;
+.logo img {
+  height: 100px; /* ajuste fino aqui */
+  width: auto;
+  object-fit: contain;
 }
 
 /* Navegação e Botão de Contato */
