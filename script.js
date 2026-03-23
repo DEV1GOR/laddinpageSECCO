@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const telefone = document.getElementById("telefone").value;
       const assunto = document.getElementById("assunto").value;
       const mensagem = document.getElementById("mensagem").value;
-      const numeroSecco = "5581991413580";
+      const numeroSecco = "5581995718479";
 
       // Monta o texto da mensagem com formatação para o WhatsApp (*negrito*)
       const textoMensagem =
