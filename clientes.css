@@ -102,6 +102,10 @@ nav a.active::after {
   transition: background-color 0.3s ease;
 }
 
+.cta-btn:hover {
+  background-color: #5aa47f;
+}
+
 /* --- Layout Principal --- */
 main {
   display: grid;
@@ -153,18 +157,27 @@ main {
   font-weight: 600;
 }
 
-/* --- Illustration --- */
+/* --- Illustration (Correção de Bug) --- */
 .illustration-container {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-bottom: 2rem; /* Margem de segurança */
 }
 
-/* --- Partners Carousel (Fix Final) --- */
+.illustration-container svg {
+  width: 100%;
+  max-width: 450px;
+  height: auto; /* Substitui o 100% e força o navegador a não sobrepor os elementos */
+  display: block;
+}
+
+/* --- Partners Carousel --- */
 .partners-carousel {
   width: 100%;
-  padding: 6rem 0;
+  padding: 4rem 0 6rem 0;
   overflow: hidden;
+  position: relative;
 }
 
 .carousel-title {
@@ -217,8 +230,17 @@ main {
 .partner-img {
   height: 50px;
   width: auto;
+  max-width: 200px;
+  object-fit: contain;
   filter: grayscale(100%) opacity(0.6);
   transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Restaura o efeito de "acender" a cor no Hover */
+.partner-img:hover {
+  filter: grayscale(0%) opacity(1);
+  transform: scale(1.05);
 }
 
 @keyframes scroll {
@@ -244,6 +266,12 @@ main {
   justify-content: center;
   cursor: pointer;
   z-index: 1001;
+  box-shadow: 0 4px 15px rgba(107, 186, 146, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.chat-widget:hover {
+  transform: scale(1.05);
 }
 
 /* --- Animações de Scroll --- */
@@ -311,6 +339,9 @@ main {
   .partner-img {
     height: 35px;
   }
+  .partners-carousel {
+    padding-top: 2rem; /* Reduz espaço vazio entre ilustração e carrossel */
+  }
 }
 
 @media (max-width: 480px) {
@@ -320,6 +351,7 @@ main {
   .cta-btn {
     width: 100%;
     text-align: center;
+    justify-content: center;
   }
   .chat-widget {
     bottom: 1.5rem;
