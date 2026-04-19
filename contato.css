@@ -384,3 +384,115 @@ body {
 .delay-6 {
   transition-delay: 0.6s;
 }
+
+/* =========================================
+   RESPONSIVIDADE AJUSTADA PARA TODOS APARELHOS
+   ========================================= */
+
+/* Tablets e Telas Menores (até 1024px) */
+@media (max-width: 1024px) {
+  header {
+    padding: 1.5rem 2rem;
+  }
+
+  nav ul {
+    gap: 1.5rem;
+  }
+
+  main {
+    padding: 3rem 2rem;
+  }
+
+  .servicos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .hero-servicos h1 {
+    font-size: 4.5rem;
+  }
+
+  .cta-dark {
+    padding: 6rem 2rem;
+  }
+
+  .cta-dark h2 {
+    font-size: 3.5rem;
+  }
+}
+
+/* Mobile Padrão (até 768px) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.5rem 1rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+  }
+
+  main {
+    padding: 2rem 1.5rem;
+  }
+
+  .hero-servicos {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-servicos h1 {
+    font-size: 3.5rem;
+  }
+
+  .servicos-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .cta-dark {
+    padding: 5rem 2rem;
+  }
+
+  .cta-dark h2 {
+    font-size: 2.8rem;
+  }
+}
+
+/* Telas muito pequenas / Mobile estreito (até 480px) */
+@media (max-width: 480px) {
+  .hero-servicos h1 {
+    font-size: 2.8rem;
+  }
+
+  .servico-card h2 {
+    font-size: 1.4rem;
+  }
+
+  .cta-btn,
+  .btn-green {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cta-dark h2 {
+    font-size: 2.2rem;
+  }
+
+  .chat-widget {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 55px;
+    height: 55px;
+  }
+
+  .chat-widget svg {
+    width: 24px;
+    height: 24px;
+  }
+}
